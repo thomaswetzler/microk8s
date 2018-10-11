@@ -48,6 +48,7 @@ export PATH=$PATH:/var/lib/snapd/snap/bin/
 
 EOF
 
-
+# Services enablen
+/var/lib/snapd/snap/bin/microk8s.enable dashboard dns
 
 
