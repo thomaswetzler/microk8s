@@ -6,6 +6,11 @@
 # Created on 10.10.2018, 10:28:38
 #
 
+# Install kubectl
+curl -Lo ~/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl 
+chmod +x ~/bin/kubectl
+sudo mv ~/bin/kubectl /usr/bin/
+
 
 
 # Install SNAP
@@ -25,10 +30,10 @@ sudo snap install microk8s --classic --channel=1.12/stable
 sudo snap list
 
 # Alias kubectl
-snap alias microk8s.kubectl kubectl
+#snap alias microk8s.kubectl kubectl
 
 # Write Config File for Kubectrl
-# /var/lib/snapd/snap/bin/microk8s.kubectl config view --raw > $HOME/.kube/config
+/var/lib/snapd/snap/bin/microk8s.kubectl config view --raw > $HOME/.kube/config
 
 # Set Path Variable
 export PATH=$PATH:/var/lib/snapd/snap/bin/
