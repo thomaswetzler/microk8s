@@ -19,9 +19,11 @@ Path to microk8s.* Binaries<br>
     /var/lib/snapd/snap/bin/
 <P>
 Start nginx Containers<br>
+    microk8s.kubectl get all --all-namespaces
     microk8s.kubectl run nginx --image nginx --replicas 3<br>
     microk8s.kubectl expose deployment nginx --port 80 --target-port 80 --type ClusterIP --selector=run=nginx --name nginx<br>
     microk8s.kubectl get all<br>
+    microk8s.kubectl get svc<br>
     curl http://localhost<br>
 <p>
 Remove nginx <br>
