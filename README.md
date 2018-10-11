@@ -9,16 +9,16 @@ container?—?you can imagine this as a lighter weight version of a Docker
 container. It uses a lot of the same underlying technologies for isolation just 
 without all the overhead of network isolation.
 <P>
-Installing SNAP on Centos<br>
+<h2>Installing SNAP on Centos</h2><br>
    https://computingforgeeks.com/install-snapd-snap-applications-centos-7/
 <P>
-Installing Kubernetes (microk8s)<br>
+<h2>Installing Kubernetes (microk8s)</h2><br>
    https://microk8s.io/
 <P>
-Path to microk8s.* Binaries<br>
+<h2>Path to microk8s.* Binaries</h2><br>
     /var/lib/snapd/snap/bin/
 <P>
-Start nginx Containers<br>
+<h2>Start nginx Containers</h2><br>
     microk8s.kubectl get all --all-namespaces
     microk8s.kubectl run nginx --image nginx --replicas 3<br>
     microk8s.kubectl expose deployment nginx --port 80 --target-port 80 --type ClusterIP --selector=run=nginx --name nginx<br>
@@ -26,12 +26,12 @@ Start nginx Containers<br>
     microk8s.kubectl get svc<br>
     curl http://localhost<br>
 <p>
-Remove nginx <br>
+<h2>Remove nginx </h2><br>
     microk8s.kubectl delete deployment/nginx<br>
     microk8s.kubectl get all<br>
     microk8s.kubectl delete svc/nginx
 <p>
-Remove microk8s<br>
+<h2>Remove microk8s</h2><br>
     microk8s.disable dashboard dns<br>
     sudo snap remove microk8s<br>
 <p>
