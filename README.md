@@ -19,19 +19,19 @@ without all the overhead of network isolation.
     /var/lib/snapd/snap/bin/
 <P>
 <h2>Start nginx Containers</h2><br>
-    microk8s.kubectl get all --all-namespaces
-    microk8s.kubectl run nginx --image nginx --replicas 3<br>
-    microk8s.kubectl expose deployment nginx --port 80 --target-port 80 --type ClusterIP --selector=run=nginx --name nginx<br>
-    microk8s.kubectl get all<br>
-    microk8s.kubectl get svc<br>
-    curl http://localhost<br>
+    > microk8s.kubectl get all --all-namespaces
+    > microk8s.kubectl run nginx --image nginx --replicas 3<br>
+    > microk8s.kubectl expose deployment nginx --port 80 --target-port 80 --type ClusterIP --selector=run=nginx --name nginx<br>
+    > microk8s.kubectl get all<br>
+    > microk8s.kubectl get svc<br>
+    > curl http://localhost<br>
 <p>
 <h2>Remove nginx </h2><br>
-    microk8s.kubectl delete deployment/nginx<br>
-    microk8s.kubectl get all<br>
-    microk8s.kubectl delete svc/nginx
+    > microk8s.kubectl delete deployment/nginx<br>
+    > microk8s.kubectl get all<br>
+    > microk8s.kubectl delete svc/nginx
 <p>
 <h2>Remove microk8s</h2><br>
-    microk8s.disable dashboard dns<br>
-    sudo snap remove microk8s<br>
+    > microk8s.disable dashboard dns<br>
+    > sudo snap remove microk8s<br>
 <p>
