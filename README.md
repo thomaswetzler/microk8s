@@ -13,7 +13,14 @@ without all the overhead of network isolation.
    https://computingforgeeks.com/install-snapd-snap-applications-centos-7/
 <P>
 <h2>Installing Kubernetes (microk8s)</h2><br>
-   https://microk8s.io/
+   https://microk8s.io/<br>
+microk8s installs a barebones upstream Kubernetes. This means just the api-server, controller-manager, scheduler, kubelet, cni, kube-proxy are installed and run. 
+Additional services like kube-dns and dashboard can be run using the microk8s.enable command. <br>
+    > microk8s.enable dns dashboard
+<P>
+<h2>Information of Kubernetes Installation</h2><br>
+    >  microk8s.kubectl cluster-info<br>
+
 <P>
 <h2>Path to microk8s.* Binaries</h2><br>
     /var/lib/snapd/snap/bin/
